@@ -1,7 +1,7 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
 import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+// import Form from 'react-bootstrap/Form';
 // import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import { useState } from 'react';
 
@@ -47,8 +47,8 @@ export default function TextForm(props) {
          onChange={handleUpChange} rows="8" cols="8"></textarea> */}
 
         <form>
-          <div class="form-group">
-            <textarea class="form-control" value={text} style={{
+          <div className="form-group">
+            <textarea className="form-control" value={text} style={{
               backgroundColor: props.mode === 'dark' ? 'grey' : 'white', color: props.mode === 'dark' ? 'white' : 'black'
             }} onChange={handleUpChange} rows="8">
 
