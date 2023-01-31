@@ -6,7 +6,7 @@ import About from './About';
 import { useState } from 'react';
 import Alert from './components/Alert';
 import React from "react";
-import ReactDOM from "react-dom/client";
+// import ReactDOM from "react-dom/client";
 import {
   BrowserRouter,
   Routes,
@@ -22,13 +22,13 @@ export default function App() {
     if (Mode === 'light') {
       setMode('dark')
       document.body.style.backgroundColor = '#3c566d';
-      document.title = 'Text-utils Dark mode';
+      // document.title = 'Text-utils Dark mode';
       showAlert("Dark mode has been enabled", "success");
     }
     else {
       setMode('light');
       document.body.style.backgroundColor = 'white';
-      document.title = 'Text-utils Light mode';
+      // document.title = 'Text-utils Light mode';
       showAlert("Light mode has been enabled", "success");
     }
   }
@@ -53,7 +53,7 @@ export default function App() {
 
           <div className="container my-3">
             <Routes>
-              <Route exact path="/about" element={<About />} />
+              <Route exact path="/about" element={<About mode={Mode}/>} />
               <Route exact path="/" element={<TextForm mode={Mode} showAlert={showAlert} />}/>
             </Routes>
           </div>
